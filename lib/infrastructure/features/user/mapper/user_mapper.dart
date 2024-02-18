@@ -4,7 +4,7 @@ import 'package:github_viewer/infrastructure/features/user/export.dart';
 extension UserMapping on UserDTO {
   User toDomain() {
     return User(
-      username: login,
+      login: login,
     );
   }
 }

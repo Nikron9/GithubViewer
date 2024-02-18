@@ -32,7 +32,7 @@ class RepositoryService implements IRepositoryService {
     httpClient.options.headers['Authorization'] = dotenv.env['API_KEY'];
 
     final response = await httpClient.get(
-        'https://api.github.com/repos/${repository.owner.username}/${repository.name}/issues');
+        'https://api.github.com/repos/${repository.owner.login}/${repository.name}/issues');
     final List<dynamic> jsonList = response.data;
     return jsonList
         .map((json) => RepositoryIssueDTO.fromJson(json).toDomain())
@@ -46,7 +46,7 @@ class RepositoryService implements IRepositoryService {
     httpClient.options.headers['Authorization'] = dotenv.env['API_KEY'];
 
     final response = await httpClient.get(
-        'https://api.github.com/repos/${repository.owner.username}/${repository.name}/pulls');
+        'https://api.github.com/repos/${repository.owner.login}/${repository.name}/pulls');
     final List<dynamic> jsonList = response.data;
     return jsonList
         .map((json) => RepositoryPullRequestDTO.fromJson(json).toDomain())

@@ -1,5 +1,5 @@
 class User {
-  final String username;
+  final String login;
 
-  User({required this.username});
+  User({required this.login});
 }

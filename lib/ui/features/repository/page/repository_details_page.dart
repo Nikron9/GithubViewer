@@ -38,7 +38,7 @@ class RepositoryDetailsPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'Author: ${repository.owner.username}',
+                    'Author: ${repository.owner.login}',
                     style: const TextStyle(fontSize: 18),
                   ),
                   const SizedBox(height: 8),
@@ -83,7 +83,7 @@ class RepositoryDetailsPage extends StatelessWidget {
                                     return RepositoryDetailsListItem(
                                       data: RepositoryDetailsListItemData(
                                         title: issue.title,
-                                        owner: issue.reporter.username,
+                                        owner: issue.reporter.login,
                                         state: issue.state,
                                       ),
                                     );
@@ -119,7 +119,7 @@ class RepositoryDetailsPage extends StatelessWidget {
                                     return RepositoryDetailsListItem(
                                       data: RepositoryDetailsListItemData(
                                         title: pullRequest.title,
-                                        owner: pullRequest.creator.username,
+                                        owner: pullRequest.creator.login,
                                         state: pullRequest.state,
                                       ),
                                     );

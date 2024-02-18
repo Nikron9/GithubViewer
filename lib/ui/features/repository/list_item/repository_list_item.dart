@@ -30,7 +30,7 @@ class RepositoryListItem extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                'Author: ${repository.owner.username}',
+                'Author: ${repository.owner.login}',
                 style: const TextStyle(fontSize: 16),
               ),
               const SizedBox(height: 4),
