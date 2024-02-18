@@ -6,7 +6,7 @@ import 'package:github_viewer/presentation/features/repository_list/export.dart'
 import 'package:github_viewer/ui/features/repository/export.dart';
 
 void main() async {
-  await dotenv.load();
+  await dotenv.load(fileName: 'env/.env');
 
   di.setup();
 
