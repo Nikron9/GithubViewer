@@ -5,7 +5,11 @@ class RepositoryListItem extends StatelessWidget {
   final Repository repository;
   final Function()? onTap;
 
-  RepositoryListItem({required this.repository, this.onTap});
+  const RepositoryListItem({
+    super.key,
+    required this.repository,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {

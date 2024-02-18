@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:github_viewer/di.dart';
 import 'package:github_viewer/presentation/features/repository_details/export.dart';
